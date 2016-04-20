@@ -1,0 +1,40 @@
+{
+  "name": "cttv.targetAssociationsTree",
+  "version": "0.0.0",
+  "description": "Tree based CTTV associations view for a given target",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "keywords": [
+    "cttv",
+    "disease"
+  ],
+  "author": "Miguel Pignatelli",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cttv.api": "0.0.5",
+    "tnt.tooltip": "^0.1.0",
+    "tnt.tree": "^0.1.2",
+    "tnt.utils": "0.1.1"
+  },
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-gzip": "^1.2.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-karma": "0.0.5",
+    "gulp-mocha": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.5",
+    "jshint": "^2.9.1",
+    "karma": "^0.13.22",
+    "mkdirp": "^0.5.1"
+  }
+}
