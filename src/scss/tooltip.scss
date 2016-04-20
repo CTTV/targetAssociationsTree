@@ -14,10 +14,6 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
 }
 
-#tnt_tooltip_1 {
-	pointer-events : none;
-}
-
 %button-link {
 	width : 30px;
 	height : 30px;
@@ -31,22 +27,4 @@
 	color : white;
 	font-weight: bold;
 	font-size: 16px;
-}
-
-.cttv_profile_link {
-	@extend %button-link;
-    background-color: green;
-	&:after {
-		@extend %content-link;
-    	content: "P";
-	};
-}
-
-.cttv_associations_link {
-	@extend %button-link;
-	background-color: red;
-	&:after {
-		@extend %content-link;
-		content: "A";
-	}
 }
