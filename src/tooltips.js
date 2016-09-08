@@ -41,8 +41,10 @@ var tooltips = function () {
 
 
     t.click = function (node) {
-        //console.log(filters);
         var obj = {};
+        if (!filters) {
+            filters = {};
+        }
         var score = node.property("__association_score");
         obj.header = node.property(function (n) { return n.disease.efo_info.label; });+ " (Association score: " + score.toFixed(2) + ")";
         var loc = "/evidence/" + target + "/" +node.property(function (n) { return n.disease.id }) + (filters.score_str ? "?score_str=" + filters.score_str[0] : "");
