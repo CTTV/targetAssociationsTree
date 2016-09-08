@@ -1,6 +1,6 @@
 {
   "name": "cttv.targetAssociationsTree",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Tree based CTTV associations view for a given target",
   "main": "index.js",
   "directories": {
