@@ -14,18 +14,11 @@ var geneAssociationsTree = function () {
         therapeuticAreas: [],
         hasLegendScale : true,
         hasLegendShape : true,
+        colors: ["#B6DDFC", "#0052A3"]
     };
 
     var treeVis = tnt_tree();
     var tooltips = tree_tooltips();
-
-    // var scale = d3.scale.quantize()
-    // 	.domain([1,1])
-    // 	.range(["#b2182b", "#ef8a62", "#fddbc7", "#f7f7f7", "#d1e5f0", "#67a9cf", "#2166ac"]);
-    var scale = d3.scale.linear()
-        .domain([0,1])
-        //.range(["#ffffff", "#08519c"]);
-        .range(["#B6DDFC", "#0052A3"]);
 
     function sortNodes () {
         treeVis.root().sort (function (node1, node2) {
@@ -36,6 +29,12 @@ var geneAssociationsTree = function () {
     function render (flowerView, div) {
         filterOutTAs(config.data);
     	var data = config.data;
+
+        var scale = d3.scale.linear()
+            .domain([0, 1])
+            //.range(["#ffffff", "#08519c"]);
+            .range(config.colors);
+
 
         // node shapes (squares for Therapeutic areas // circles for the rest)
         var ta_display = tnt_tree.node_display.square()
@@ -410,6 +409,14 @@ var geneAssociationsTree = function () {
         return this;
     };
 
+
+    theme.colors = function (cs) {
+        if (!arguments.length) {
+            return config.colors;
+        }
+        config.colors = cs;
+        return this;
+    };
 
     // datatypes
     // theme.datatypes = function (dts) {
