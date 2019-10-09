@@ -1,6 +1,6 @@
 {
   "name": "cttv.targetAssociationsTree",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Tree based CTTV associations view for a given target",
   "main": "index.js",
   "directories": {
@@ -14,6 +14,9 @@
     "disease"
   ],
   "author": "Miguel Pignatelli",
+  "contributors": [
+    "Luca Fumis <luca.fumis@gmail.com>"
+  ],
   "license": "Apache-2.0",
   "dependencies": {
     "cttv.api": "0.0.15",
