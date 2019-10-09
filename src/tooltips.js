@@ -128,14 +128,11 @@ var tooltips = function () {
             var flowerData = [];
             for (var i=0; i<names.datatypesOrder.length; i++) {
                 var dkey = names.datatypes[names.datatypesOrder[i]];
-                var key = names.datatypesOrder[i];
-                var datasource = nodeDatatypes[dkey];
 
-                // var datasource = lookDatasource(nodeDatatypes, dkey);
                 flowerData.push({
-                    "value": datasource,
-                    "label": names.datatypesLabels[key],
-                    "active": true,//hasActiveDatatype(names.datatypes[key])
+                    "value": nodeDatatypes[dkey.id],
+                    "label": dkey.shortLabel,
+                    "active": true, //hasActiveDatatype(names.datatypes[key])
                 });
             }
 
